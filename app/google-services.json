@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "484401837819",
+    "project_id": "potato-af649",
+    "storage_bucket": "potato-af649.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:484401837819:android:5e529621fc77129124a25e",
+        "android_client_info": {
+          "package_name": "com.example.potato"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "484401837819-ir517vm7vtprfstfrobg8p8icg8lviqd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5KkZPDwDZbwYjsou5lFAwjr3OVdVTPO0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "484401837819-ir517vm7vtprfstfrobg8p8icg8lviqd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

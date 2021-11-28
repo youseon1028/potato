@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff0f0f0">
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="52dp"
+        android:layout_height="62dp"
+        android:background="#00FFFFFF"
+        android:text="X"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:background="#CD9C53" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LED 무드등"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.023" />
+
+
+    <ImageView
+        android:id="@+id/colorPick"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:contentDescription="@string/description"
+        android:src="@drawable/colorroll"
+        app:layout_constraintBottom_toTopOf="@id/guideline1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.588" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/selectedColor"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/colorPick"
+        app:layout_constraintEnd_toEndOf="@id/colorPick"
+        app:layout_constraintStart_toStartOf="@id/colorPick"
+        app:layout_constraintTop_toTopOf="@id/colorPick"
+        app:shapeAppearanceOverlay="@style/roundedCorners" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6867305" />
+
+    <TextView
+        android:id="@+id/currentState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="R: 250 G: 250 B: 250\n Brightness: 255"
+        android:textColor="#FF000000"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="@id/guideline1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline1"
+        android:layout_marginBottom="10dp"/>
+
+    <SeekBar
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="7dp"
+        android:background="@drawable/seekbar"
+        android:max="255"
+        android:min="0"
+        android:thumb="@drawable/thumb"
+        app:layout_constraintBottom_toTopOf="@id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/currentState" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8235294" />
+
+    <ImageButton
+        android:id="@+id/btnRainbow"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/myrainbow"
+        app:layout_constraintBottom_toTopOf="@id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/btnPower"
+        app:layout_constraintHorizontal_bias="0.23"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline2"
+        android:contentDescription="@string/description"/>
+
+    <ImageButton
+        android:id="@+id/btnPower"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/powerbtn"
+        app:layout_constraintBottom_toTopOf="@id/guideline3"
+        app:layout_constraintEnd_toStartOf="@id/btnColorPicker"
+        app:layout_constraintStart_toEndOf="@id/btnRainbow"
+        app:layout_constraintTop_toBottomOf="@id/guideline2"
+        android:contentDescription="@string/description"/>
+
+    <ImageButton
+        android:id="@+id/btnColorPicker"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/colorbtn"
+        app:layout_constraintBottom_toTopOf="@id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnPower"
+        app:layout_constraintTop_toBottomOf="@id/guideline2"
+        android:contentDescription="@string/description"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.97811216" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
